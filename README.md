@@ -1,3 +1,5 @@
+## Note: The deployment requires a platform with Amazon Linux (Amazon Linux 2 won't work, cannot build multi-stage docker images) on EB.
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
