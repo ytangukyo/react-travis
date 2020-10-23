@@ -7,3 +7,17 @@ before_install:
 
 script:
   - docker run cromulentscientist/docker-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "BS-react-travis"
+  env: "BsReactTravis-env"
+  bucket_name: "elasticbeanstalk-us-east-1-004190587247"
+  bucket_path: "BS-react-travis"
+  on:
+    branch: master
+
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
