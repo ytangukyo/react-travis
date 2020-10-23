@@ -4,8 +4,8 @@ services:
 
 before_install:
   - docker build -t cromulentscientist/docker-react .
-    #script:
-    #  - docker run cromulentscientist/docker-react npm run test -- --coverage
+script:
+  - docker run cromulentscientist/docker-react #npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
